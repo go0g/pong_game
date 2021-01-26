@@ -1,7 +1,7 @@
 from turtle import Turtle
 
 
-class Line_Draw(Turtle):
+class LineDraw(Turtle):
     def __init__(self, screen_hight):
         super().__init__()
         self.screen_hight = screen_hight
@@ -23,4 +23,3 @@ class Line_Draw(Turtle):
             timmy.forward(20)
             timmy.penup()
             timmy.forward(20)
-

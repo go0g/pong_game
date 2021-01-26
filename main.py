@@ -1,15 +1,16 @@
 from turtle import Screen
 from ball import Ball
 from paddle import Paddle
-from line_draw import Line_Draw
+from linedraw import LineDraw
 from scoreboard import Score
-import time
+
 
 SCREEN_HEIGHT = 600
 SCREEN_WIDTH = 800
 
 
 def screen_init():
+    # init the screen
     my_screen = Screen()
     my_screen.setup(SCREEN_WIDTH, SCREEN_HEIGHT)
     my_screen.bgcolor("black")
@@ -17,18 +18,22 @@ def screen_init():
 
 
 def up_left():
+    # move up the left paddle
     paddle_left.move_up()
 
 
 def down_left():
+    # move down the left paddle
     paddle_left.move_down()
 
 
 def up_right():
+    # move up the right paddle
     paddle_right.move_up()
 
 
 def down_right():
+    # move down the right paddle
     paddle_right.move_down()
 
 
@@ -52,7 +57,7 @@ screen.tracer(0)
 
 paddle_left = Paddle(-380)
 paddle_right = Paddle(380)
-line_drawer = Line_Draw(SCREEN_HEIGHT)
+line_drawer = LineDraw(SCREEN_HEIGHT)
 ball = Ball()
 scoreboard = Score()
 

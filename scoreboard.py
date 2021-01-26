@@ -13,6 +13,7 @@ class Score(Turtle):
         else:
             self.player_left.update_score()
 
+
 class Player(Turtle):
     def __init__(self, position_x, position_y):
         super().__init__()
@@ -21,7 +22,7 @@ class Player(Turtle):
         self.hideturtle()
         self.setposition(position_x, position_y)
         self.color('white')
-        self.write(self.score, move=False,  align="center", font=("Arial", 30, "normal"))
+        self.write(self.score, move=False, align="center", font=("Arial", 30, "normal"))
 
     def update_score(self):
         self.score += 1
