@@ -32,3 +32,7 @@ class Ball(Turtle):
         if paddle.xcor() - self.xcor() < 20:
             if paddle.ycor() - 40 < self.ycor() < paddle.ycor() + 40:
                 self.setheading(180 - self.heading()+random.randint(-10, 10))
+
+    def reset(self):
+        self.setposition(0,0)
+        self.setheading(random_angel())
